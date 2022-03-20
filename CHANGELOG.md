@@ -17,5 +17,30 @@ Dates in this file will have the following format: MM/DD/YYYY
 - We could use Project Reactor to this project but this depends on how many requests by second in this API will have.
 - Using Project Reactor allows parallel thread execution. We need to use Mono/Flex and subscribe Monos to perform the cycle.
 
+## [0.2.0] - 03/20/2022 - Branch: feature/MVC-development
+## Added
+- Controller creation using requestParam and requestBody to get group information and user that send the message
+- Endpoint creation
+- Constructor dependency injection
+- DTO
+  - contactDTO to get group users information
+  - groupRequestDTO to get request from Constructor
+  - groupResponseDTO to response HttpStatus. In this project, I am sending the message through another API but we can return contact list as a response
+- Repository creation to handle database queries (JPA) CRUD
+  - Model of contacts (name, id, phonenumber, etc)
+  - interface and query to bring contacts for groupId
+- Service creation. Validation request and process request methods
+- Validation package. 
+  - GroupValidation to handle all validations for groups
+  - IdValidation to handle all id validations
+    - Needs to be positive
+    - Needs to not be null
+    - etc
+- build.gradle modification. Adding LOMBOK to handle getter/setter/constructors and builders
+- 
+
 ## [0.1.0] - 03/20/2022 - Branch: feature/structure
 ## Added
+- Project structure
+- README with specifications
+- CHANGELOG to explain step by step
