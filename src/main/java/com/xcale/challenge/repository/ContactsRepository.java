@@ -8,6 +8,8 @@ import java.util.List;
 
 public interface ContactsRepository extends JpaRepository<Contact, Long> {
 
-    @Query("SELECT * FROM users usrs INNER JOIN groups grps ON grps.id = usrs.group_id WHERE group_id = id")
+    // In here Spring get contacts from "UserGroup" table and get all UserID that have GroupID as parameter
+    // We also can create our own query to get same information
+    @Query("SELECT * FROM users WHERE user_id = (SELECT user_id FROM usersGroups WHERE group_id = :id)")
     List<Contact> findContactsByGroupId(String id);
 }

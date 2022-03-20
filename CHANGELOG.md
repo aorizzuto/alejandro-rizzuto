@@ -17,6 +17,12 @@ Dates in this file will have the following format: MM/DD/YYYY
 - We could use Project Reactor to this project but this depends on how many requests by second in this API will have.
 - Using Project Reactor allows parallel thread execution. We need to use Mono/Flex and subscribe Monos to perform the cycle.
 
+## [0.3.0] - 03/20/2022 - Branch: feature/handle-exceptions
+## Added
+- ErrorCode enum creation
+- Validation modified with ErroCode usage
+- Exception handler created to respond a JSON instead an exception
+
 ## [0.2.0] - 03/20/2022 - Branch: feature/MVC-development
 ## Added
 - Controller creation using requestParam and requestBody to get group information and user that send the message
@@ -37,7 +43,6 @@ Dates in this file will have the following format: MM/DD/YYYY
     - Needs to not be null
     - etc
 - build.gradle modification. Adding LOMBOK to handle getter/setter/constructors and builders
-- 
 
 ## [0.1.0] - 03/20/2022 - Branch: feature/structure
 ## Added
