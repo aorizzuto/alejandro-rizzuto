@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface ContactsRepository extends JpaRepository<Contact, Long> {
+public interface IContactsRepository extends JpaRepository<Contact, Long> {
 
     // In here Spring get contacts from "UserGroup" table and get all UserID that have GroupID as parameter
     // We also can create our own query to get same information
