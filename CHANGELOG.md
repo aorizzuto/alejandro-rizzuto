@@ -17,6 +17,14 @@ Dates in this file will have the following format: MM/DD/YYYY
 - We could use Project Reactor to this project but this depends on how many requests by second in this API will have.
 - Using Project Reactor allows parallel thread execution. We need to use Mono/Flex and subscribe Monos to perform the cycle.
 
+## [0.4.0] - 03/20/2022 - Branch: feature/tests
+## Added
+- imgs directory created with UML diagram
+- Controller tests
+- Service tests
+- Validation tests
+- I do not add more tests because challenge time is expiring but I can use more facets of Mockito.spy and Mockito.mock
+
 ## [0.3.0] - 03/20/2022 - Branch: feature/handle-exceptions
 ## Added
 - ErrorCode enum creation

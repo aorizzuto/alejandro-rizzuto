@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.xcale.challenge.dto.ContactDTO;
 import com.xcale.challenge.dto.GroupRequestDTO;
 import com.xcale.challenge.dto.GroupResponseDTO;
-import com.xcale.challenge.repository.ContactsRepository;
+import com.xcale.challenge.repository.IContactsRepository;
 import com.xcale.challenge.repository.model.Contact;
 import com.xcale.challenge.service.IGroupService;
 import com.xcale.challenge.validation.GroupValidation;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 public class GroupServiceImpl implements IGroupService {
     @Autowired
-    ContactsRepository contactsRepository;
+    IContactsRepository contactsRepository;
 
     @Override
     public void validate(String id, GroupRequestDTO request) throws Exception {
